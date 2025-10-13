@@ -1,0 +1,30 @@
+services:
+  biblioteca:
+    build:
+      context: ./biblioteca
+      dockerfile: Dockerfile
+    mem_limit: 512m
+    ports:
+      - "8080:8080"
+    environment:
+      DB_URL: jdbc:mysql://bibliot:3306/biblioteca?createDatabaseIfNotExist=true&serverTimezone=UTC&allowPublicKeyRetrieval=true 
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+    restart: always
+    depends_on:
+      bibliot:
+        condition: service_healthy        
+  bibliot:
+    image: mysql:8.0
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: biblioteca
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    restart: always
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 10s
+      retries: 10

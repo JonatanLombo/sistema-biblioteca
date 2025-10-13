@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "62964f77-74e2-426f-aed6-c65cbec7e221",
+		"name": "Biblioteca",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41263915"
+	},
+	"item": [
+		{
+			"name": "usuarios_creacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Talia\",\r\n    \"apellido\":\"Tavera\",\r\n    \"documento\":\"987456321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios_busqueda",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Alejandra\",\r\n    \"apellido\":\"Contreras\",\r\n    \"documento\":\"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/traer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios_busqueda_especifica",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Alejandra\",\r\n    \"apellido\":\"Contreras\",\r\n    \"documento\":\"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/traer/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"traer",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios_editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Camila\",\r\n    \"apellido\":\"Castro\",\r\n    \"documento\":\"987456321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/editar/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"editar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios_eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\":\"Alejandra\",\r\n    \"apellido\":\"Contreras\",\r\n    \"documento\":\"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/eliminar/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"eliminar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "libros_creacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"Cien años de soledad\",\r\n    \"editorial\":\"Editorial Sudamericana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/libros/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "libros_busqueda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/libros/traer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "libros_busqueda_especifica",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/libros/traer/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"traer",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "libros_editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"Don Quijote de la Mancha\",\r\n    \"editorial\":\"Editorial Sudamericana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/libros/editar/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"editar",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "libros_eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/libros/eliminar/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"libros",
+						"eliminar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prestamos_creacion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fechaInicio\":\"2025-07-01\",\r\n    \"fechaEntrega\":\"2025-07-30\",\r\n    \"librosId\": [4,6],\r\n    \"usuarioId\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/prestamos/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prestamos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prestamos_busqueda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/prestamos/traer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prestamos",
+						"traer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prestamos_busqueda_especifica",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/prestamos/traer/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prestamos",
+						"traer",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prestamos_editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fechaEntrega\":\"2025-07-30\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/prestamos/editar/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prestamos",
+						"editar",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "prestamos_eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/prestamos/eliminar/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prestamos",
+						"eliminar",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
