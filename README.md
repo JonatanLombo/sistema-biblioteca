@@ -66,6 +66,48 @@ El proyecto está dividido en capas que facilitan la mantenibilidad y escalabili
 
 ---
 
+🐳 Ejecución con Docker
+
+El proyecto incluye configuración para ejecutarse fácilmente dentro de contenedores Docker, evitando la instalación manual de MySQL o configuraciones locales complejas.
+🔹 Requisitos previos
+    Tener instalado Docker
+🔹 Configuración de credenciales
+
+El archivo docker-compose.yml utiliza variables de entorno definidas en un archivo .env (no se sube al repositorio por seguridad).
+Antes de ejecutar el proyecto, asegúrate de crear un archivo .env junto al docker-compose.yml con tus propias credenciales:
+
+# Archivo .env (ejemplo)
+MYSQL_ROOT_PASSWORD=tu_root_password
+MYSQL_USER=appuser
+MYSQL_PASSWORD=tu_password_segura
+
+DB_USER=appuser
+DB_PASSWORD=tu_password_segura
+DB_URL=jdbc:mysql://bibliot:3306/biblioteca?createDatabaseIfNotExist=true&serverTimezone=UTC&allowPublicKeyRetrieval=true
+
+⚠️ Importante:
+Las credenciales (MYSQL_USER, MYSQL_PASSWORD, DB_USER, DB_PASSWORD) deben coincidir.
+No uses el usuario root para la conexión del backend.
+
+🔹 Levantar el entorno
+En la carpeta donde se encuentra el docker-compose.yml, ejecuta:
+    docker-compose up -d
+
+Esto iniciará dos contenedores:
+bibliot: base de datos MySQL 8.
+biblioteca: aplicación Spring Boot.
+
+Accede al backend desde:
+👉 http://localhost:8080
+
+🔹 Detener los contenedores
+Cuando termines de trabajar, puedes detener todo con:
+docker-compose down
+
+Los datos se mantienen gracias al volumen mysql_data, por lo que no se pierde la información al apagar el contenedor.
+
+---
+
 ## ⚙️ Configuración del Proyecto
 
 Archivo `application.properties`:
