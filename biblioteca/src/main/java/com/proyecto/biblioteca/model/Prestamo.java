@@ -39,8 +39,6 @@ import lombok.Setter;
  * <p>Esta clase está mapeada a la tabla <strong>prestamo</strong> en la base de datos
  * y es administrada por el contexto de persistencia de JPA.</p>
  *
- * @see Libro
- * @see Usuario
  */
 @AllArgsConstructor
 @NoArgsConstructor

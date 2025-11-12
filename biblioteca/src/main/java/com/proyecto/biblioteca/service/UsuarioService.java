@@ -11,10 +11,10 @@ import com.proyecto.biblioteca.repository.IUsuarioRepository;
  *
  * <p>Esta clase actúa como capa intermedia entre el controlador y el repositorio,
  * gestionando la lógica necesaria para la creación, consulta, edición y eliminación
- * de libros dentro del sistema de gestión biblioteca.</p>
+ * de usuarios dentro del sistema de gestión biblioteca.</p>
  *
  * <p>Delegando la persistencia en {@link IUsuarioRepository}, garantiza la integridad
- * de los datos y centraliza las reglas de negocio aplicables a la entidad {@code Libro}.</p>
+ * de los datos y centraliza las reglas de negocio aplicables a la entidad {@code Usuario}.</p>
  *
  */
 @Service

@@ -33,7 +33,7 @@ import lombok.Setter;
 public class PrestamoInfoDTO {
 
     /**
-     * Identificador único del préstamo.
+     * Código único del préstamo.
      *
      * <p>Permite identificar el préstamo al realizar consultas o actualizaciones.</p>
      */

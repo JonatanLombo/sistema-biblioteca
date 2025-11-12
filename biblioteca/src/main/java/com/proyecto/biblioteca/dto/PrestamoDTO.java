@@ -22,9 +22,6 @@ import lombok.Setter;
  * <p>Este objeto se emplea exclusivamente para operaciones de creación,
  * mientras que la gestión y persistencia se realizan mediante la entidad {@link Prestamo}.</p>
  *
- * @see Prestamo
- * @see Libro
- * @see Usuario
  */
 @AllArgsConstructor
 @NoArgsConstructor

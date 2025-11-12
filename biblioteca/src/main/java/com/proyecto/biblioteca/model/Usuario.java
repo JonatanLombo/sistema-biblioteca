@@ -31,6 +31,12 @@ import lombok.Setter;
 @Entity
 public class Usuario {
 
+    /**
+     * Identificador único del usuario.
+     *
+     * <p>Generado automáticamente mediante la estrategia
+     * {@link GenerationType#IDENTITY} al persistir la entidad.</p>
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUsuario;
@@ -51,6 +57,8 @@ public class Usuario {
      * <p>No puede estar vacío y es requerido para el registro de la entidad.</p>
      * <p>No puede superar los 40 caracteres.</p>
      */
+    @NotBlank(message = "El apellido es obligatorio")
+    @Size(max = 40, message = "El apellido no puede superar los 40 caracteres")
     private String apellido;
 
     /**
